@@ -60,7 +60,6 @@ exports.cmdsList = (member) => {
     var coms = Object.keys(cmd.commands)
     coms.forEach((command) => {
         if (command == "help") {
-            continue
         }
         else if (cmd.commands[command].enabled && member.hasPermission(cmd.commands[command].perms)) {
             available.push(command)
